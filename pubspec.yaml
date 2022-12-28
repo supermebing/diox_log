@@ -1,7 +1,7 @@
-name: dio_log
+name: diox_log
 description: A plug-in that captures requests and views them within the application, providing functions such as request replication and JSON expansion
-version: 2.0.4
-homepage: https://github.com/flutterplugin/dio_log
+version: 3.0.0
+homepage: https://github.com/supermebing/diox_log
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
@@ -9,9 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dio: ^4.0.0
+  diox: ^5.0.0-dev.2
 
-dev_dependencies: 
+dev_dependencies:
   flutter_test:
     sdk: flutter
 

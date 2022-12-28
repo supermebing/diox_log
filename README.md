@@ -1,5 +1,5 @@
 
-# dio_log
+# diox_log
 [![pub package](https://img.shields.io/pub/v/dio_log.svg)](https://pub.dev/packages/dio_log)
 #### HTTP Inspector tool for Dart which can debugging http requests，Currently, DIO based HTTP capture is implemented
 #### Of course, you can implement an Interceptor instead of a DiologInterceptor to adapt to other HTTP clients
@@ -9,14 +9,14 @@
 ### Add dependency
 ### 添加依赖
 ```
-dependencies: 
-  dio_log : ^2.0.3
+dependencies:
+  diox_log : ^2.0.3
 ```
-### [github](https://github.com/flutterplugin/dio_log)
+### [github](https://github.com/supermebing/diox_log)
 ```
-dio_log:
+diox_log:
   git:
-  url: git@github.com:flutterplugin/dio_log.git
+  url: git@github.com/supermebing/diox_log.git
   ref: v2.0.3
 ```
 ### set interceptor of dio
@@ -36,12 +36,12 @@ debugBtnIsShow()
 ```
 ### Or open a log list where you want it to be
 ### 或者在你期望的地方打开日志列表
-``` 
+```
 Navigator.of(context).push(
     MaterialPageRoute(
       builder: (context) => HttpLogListWidget(),
     ),
-  );  
+  );
 ```
 ### Other configurable parameters
 ### 其他可设置参数
@@ -54,12 +54,12 @@ LogPoolManager.getInstance().isError = (res) => res.resOptions==null;
 DioLogInterceptor.enablePrintLog = false;
 ```
 
-### Screenshot 
-<img src="https://raw.githubusercontent.com/flutterplugin/dio_log/develop/images/log_list.jpg" width="200">      
+### Screenshot
+<img src="https://raw.githubusercontent.com/flutterplugin/dio_log/develop/images/log_list.jpg" width="200">
 <img src="https://raw.githubusercontent.com/flutterplugin/dio_log/develop/images/log_request.jpg" width="200">
 <img src="https://raw.githubusercontent.com/flutterplugin/dio_log/develop/images/log_response.jpg" width="200">
 
-### gif demo 
+### gif demo
 ![gif](https://raw.githubusercontent.com/flutterplugin/dio_log/develop/images/dio_log_example.gif)
 ### welcome to add my WeChat,Hand over a friend
 <img src="https://raw.githubusercontent.com/flutterplugin/dio_log/develop/images/wechat.png" width="200">

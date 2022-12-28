@@ -1,5 +1,5 @@
-import 'package:dio/dio.dart';
-import 'package:dio_log/dio_log.dart';
+import 'package:diox/diox.dart';
+import 'package:diox_log/diox_log.dart';
 
 Dio dio = Dio();
 

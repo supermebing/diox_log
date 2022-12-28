@@ -1,4 +1,4 @@
-import 'package:dio_log/bean/net_options.dart';
+import 'package:diox_log/bean/net_options.dart';
 import 'package:flutter/material.dart';
 
 ///错误信息展示页面

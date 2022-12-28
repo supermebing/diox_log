@@ -1,11 +1,12 @@
-import 'package:dio/dio.dart';
-import 'package:dio_log/bean/err_options.dart';
-import 'package:dio_log/bean/net_options.dart';
-import 'package:dio_log/bean/req_options.dart';
-import 'package:dio_log/bean/res_options.dart';
 import 'dart:developer';
-import '../dio_log.dart';
-import 'package:flutter/foundation.dart';
+
+import 'package:diox/diox.dart';
+import 'package:diox_log/bean/err_options.dart';
+import 'package:diox_log/bean/net_options.dart';
+import 'package:diox_log/bean/req_options.dart';
+import 'package:diox_log/bean/res_options.dart';
+
+import '../diox_log.dart';
 
 ///log日志的处理类
 class DioLogInterceptor implements Interceptor {

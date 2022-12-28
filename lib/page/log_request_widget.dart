@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
-import 'package:dio_log/bean/net_options.dart';
+import 'package:diox/diox.dart';
+import 'package:diox_log/bean/net_options.dart';
 import 'package:flutter/material.dart';
 
-import '../dio_log.dart';
+import '../diox_log.dart';
 
 class LogRequestWidget extends StatefulWidget {
   final NetOptions netOptions;

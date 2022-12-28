@@ -1,3 +1,5 @@
+## [v3.0.0] - 2022/12/28
+* And the dio_log plugin has been upgrading the dio dependency to diox, and renaming diox_log
 ## [v2.0.4] - 2022/07/11
 * remove WidgetsBinding.instance.addPostFrameCallback was replaced by await Future.delayed(Duration(milliseconds: 500));
 ## [v2.0.3] - 2021/06/13
@@ -28,7 +30,7 @@
 * Support dio > 3.0.0
 ## [v1.3.2] - 2019/9/18
 * Support Flutter Web
-* Support dio >2.2.1 
+* Support dio >2.2.1
 * if you dio version < 2.2.1, please use dio_log:1.3.1
 ## [v1.3.1] - 2019/9/05
 * fix shrink and expand bug

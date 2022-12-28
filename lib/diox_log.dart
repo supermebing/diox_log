@@ -1,9 +1,9 @@
-library dio_log;
+library diox_log;
 
-export 'package:dio_log/widget/json_view.dart';
+export 'package:diox_log/widget/json_view.dart';
 
 export 'http_log_list_widget.dart';
-export 'interceptor/dio_log_interceptor.dart';
+export 'interceptor/diox_log_interceptor.dart';
 export 'overlay_draggable_button.dart';
 export 'page/log_error_widget.dart';
 export 'page/log_request_widget.dart';
