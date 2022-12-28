@@ -10,14 +10,14 @@
 ### 添加依赖
 ```
 dependencies:
-  diox_log : ^3.0.0
+  diox_log : ^3.0.1
 ```
 ### [github](https://github.com/supermebing/diox_log)
 ```
 diox_log:
   git:
   url: git@github.com/supermebing/diox_log.git
-  ref: v3.0.0
+  ref: v3.0.1
 ```
 ### set interceptor of dio
 ### 给dio设置监听
