@@ -1,6 +1,6 @@
 
 # diox_log
-[![pub package](https://img.shields.io/pub/v/dio_log.svg)](https://pub.dev/packages/dio_log)
+[![pub package](https://img.shields.io/pub/v/dio_log.svg)](https://pub.dev/packages/diox_log)
 #### HTTP Inspector tool for Dart which can debugging http requests，Currently, DIO based HTTP capture is implemented
 #### Of course, you can implement an Interceptor instead of a DiologInterceptor to adapt to other HTTP clients
 #### flutter的HTTP检查器工具，可以帮助调试HTTP请求，目前实现了基于diox的http捕获
@@ -10,14 +10,14 @@
 ### 添加依赖
 ```
 dependencies:
-  diox_log : ^2.0.3
+  diox_log : ^3.0.0
 ```
 ### [github](https://github.com/supermebing/diox_log)
 ```
 diox_log:
   git:
   url: git@github.com/supermebing/diox_log.git
-  ref: v2.0.3
+  ref: v3.0.0
 ```
 ### set interceptor of dio
 ### 给dio设置监听
