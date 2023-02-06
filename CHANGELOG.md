@@ -1,3 +1,5 @@
+## [v3.0.2] - 2023/02/06
+* 更新主题色
 ## [v3.0.0] - 2022/12/28
 * And the dio_log plugin has been upgrading the dio dependency to diox, and renaming diox_log
 ## [v2.0.4] - 2022/07/11

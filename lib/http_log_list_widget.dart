@@ -24,7 +24,8 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Request Logs',
+          '请求日志',
+          style: TextStyle(color: theme.textTheme.titleLarge?.color),
         ),
         backgroundColor: theme.scaffoldBackgroundColor,
         elevation: 1.0,
@@ -44,7 +45,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               child: Align(
                 child: Text(
                   debugBtnIsShow() ? 'close overlay' : 'open overlay',
-                  style: theme.textTheme.caption!
+                  style: theme.textTheme.titleMedium!
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
@@ -60,7 +61,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               child: Align(
                 child: Text(
                   'clear',
-                  style: theme.textTheme.caption!
+                  style: theme.textTheme.titleMedium!
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
@@ -93,7 +94,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
 
     Color? textColor = LogPoolManager.getInstance().isError(item)
         ? Colors.red
-        : Theme.of(context).textTheme.bodyText1!.color;
+        : Theme.of(context).textTheme.titleLarge!.color;
     return Card(
       margin: EdgeInsets.all(8),
       elevation: 6,

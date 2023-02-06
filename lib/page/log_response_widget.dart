@@ -49,7 +49,7 @@ class _LogResponseWidgetState extends State<LogResponseWidget>
           ],
         ),
         Text(
-          'Tip: long press a key to copy the value to the clipboard',
+          'Tip: 长按一个键将值复制到剪贴板',
           style: TextStyle(
             fontSize: 10,
             color: Colors.red,

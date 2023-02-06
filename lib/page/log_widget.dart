@@ -42,7 +42,8 @@ class _LogWidgetState extends State<LogWidget>
       appBar: AppBar(
         title: Text(
           widget.netOptions.reqOptions!.url!,
-          style: TextStyle(fontSize: 11),
+          style:
+              TextStyle(fontSize: 11, color: theme.textTheme.titleLarge?.color),
         ),
         backgroundColor: theme.scaffoldBackgroundColor,
         elevation: 1.0,
