@@ -3,7 +3,7 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 
 import 'bean/net_options.dart';
-import 'diox_log.dart';
+import 'dio_log.dart';
 import 'page/log_widget.dart';
 
 ///网络请求日志列表

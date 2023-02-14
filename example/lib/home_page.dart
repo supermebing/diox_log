@@ -1,4 +1,4 @@
-import 'package:diox_log/diox_log.dart';
+import 'package:dio5_log/dio_log.dart';
 import 'package:flutter/material.dart';
 
 import 'http_utils.dart';

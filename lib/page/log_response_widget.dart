@@ -1,5 +1,5 @@
-import 'package:diox_log/bean/net_options.dart';
-import 'package:diox_log/diox_log.dart';
+import 'package:dio5_log/bean/net_options.dart';
+import 'package:dio5_log/dio_log.dart';
 import 'package:flutter/material.dart';
 
 class LogResponseWidget extends StatefulWidget {

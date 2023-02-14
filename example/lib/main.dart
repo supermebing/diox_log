@@ -15,8 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Demo of diox_log',
       theme: ThemeData(
+        useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
+      darkTheme: ThemeData.dark(
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
       home: MyHomePage(title: 'Demo of diox_log'),
     );
   }

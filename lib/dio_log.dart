@@ -1,6 +1,6 @@
 library diox_log;
 
-export 'package:diox_log/widget/json_view.dart';
+export 'package:dio5_log/widget/json_view.dart';
 
 export 'http_log_list_widget.dart';
 export 'interceptor/diox_log_interceptor.dart';
