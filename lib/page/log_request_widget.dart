@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:dio5_log/bean/net_options.dart';
-import 'package:dio5_log/widget/json_view.dart';
 import 'package:flutter/material.dart';
 
 import '../dio_log.dart';
