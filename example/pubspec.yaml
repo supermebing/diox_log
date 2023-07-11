@@ -18,7 +18,7 @@ description: example of dio log
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -28,9 +28,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.1
   dio: ^5.0.0
-#  diox_log: 2.0.3
+  #  diox_log: 2.0.3
   dio5_log:
-    path: ../../dio5_log
+    path: ../
 
 dev_dependencies:
   flutter_test:
@@ -76,7 +76,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
 
   # This section identifies your Flutter project as a module meant for
   # embedding in a native host app.  These identifiers should _not_ ordinarily
