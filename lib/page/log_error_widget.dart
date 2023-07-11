@@ -19,7 +19,13 @@ class _LogErrorWidgetState extends State<LogErrorWidget>
     return Container(
       height: double.infinity,
       child: Center(
-        child: Text(widget.netOptions.errOptions?.errorMsg ?? 'no error'),
+        child: Text(
+          widget.netOptions.errOptions?.errorMsg ?? '没有错误😄',
+          style: TextStyle(
+            fontSize: 16,
+            color: Theme.of(context).textTheme.titleLarge?.color,
+          ),
+        ),
       ),
     );
   }

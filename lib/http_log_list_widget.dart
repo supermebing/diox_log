@@ -24,14 +24,14 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          '请求日志',
+          '🛜日志',
           style: TextStyle(color: theme.textTheme.titleLarge?.color),
         ),
         backgroundColor: theme.scaffoldBackgroundColor,
         elevation: 1.0,
         iconTheme: theme.iconTheme,
         actions: <Widget>[
-          InkWell(
+          GestureDetector(
             onTap: () {
               if (debugBtnIsShow()) {
                 dismissDebugBtn();
@@ -44,14 +44,14 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Align(
                 child: Text(
-                  debugBtnIsShow() ? 'close overlay' : 'open overlay',
-                  style: theme.textTheme.titleMedium!
+                  debugBtnIsShow() ? '隐藏悬浮' : '显示悬浮',
+                  style: theme.textTheme.titleSmall!
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
           ),
-          InkWell(
+          GestureDetector(
             onTap: () {
               LogPoolManager.getInstance().clear();
               setState(() {});
@@ -60,8 +60,8 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: Align(
                 child: Text(
-                  'clear',
-                  style: theme.textTheme.titleMedium!
+                  '清空',
+                  style: theme.textTheme.titleSmall!
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
@@ -71,7 +71,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
       ),
       body: logMap!.length < 1
           ? Center(
-              child: Text('no request log'),
+              child: Text('无请求日志'),
             )
           : ListView.builder(
               reverse: false,
@@ -95,9 +95,13 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     Color? textColor = LogPoolManager.getInstance().isError(item)
         ? Colors.red
         : Theme.of(context).textTheme.titleLarge!.color;
-    return Card(
-      margin: EdgeInsets.all(8),
-      elevation: 6,
+    return Container(
+      decoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(8),
       child: InkWell(
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -114,20 +118,30 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
                 'url: ${reqOpt.url}',
                 style: TextStyle(
                   color: textColor,
+                  fontSize: 16,
+                  height: 1.4,
                 ),
               ),
+              SizedBox(height: 8),
               Divider(height: 2),
+              SizedBox(height: 8),
               Text(
-                'status: ${resOpt?.statusCode}',
+                'statusCode: ${resOpt?.statusCode}',
                 style: TextStyle(
                   color: textColor,
+                  fontSize: 16,
+                  height: 1.4,
                 ),
               ),
+              SizedBox(height: 8),
               Divider(height: 2),
+              SizedBox(height: 8),
               Text(
                 'requestTime: $requestTime    duration: ${resOpt?.duration ?? 0}ms',
                 style: TextStyle(
                   color: textColor,
+                  fontSize: 16,
+                  height: 1.4,
                 ),
               ),
             ],

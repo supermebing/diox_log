@@ -249,7 +249,10 @@ class _JsonViewState extends State<JsonView> {
   Text _getDefText(String str) {
     return Text(
       str,
-      style: TextStyle(fontSize: widget.fontSize),
+      style: TextStyle(
+        fontSize: widget.fontSize,
+        color: Theme.of(context).textTheme.titleMedium?.color,
+      ),
     );
   }
 

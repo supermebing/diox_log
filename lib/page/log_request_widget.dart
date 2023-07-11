@@ -59,7 +59,11 @@ class _LogRequestWidgetState extends State<LogRequestWidget>
           children: <Widget>[
             Text(
               'Tip: 长按一个键将值复制到剪贴板',
-              style: TextStyle(fontSize: 10, color: Colors.red),
+              style: TextStyle(
+                fontSize: 13,
+                color: Colors.red,
+                fontWeight: FontWeight.w600,
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -69,7 +73,7 @@ class _LogRequestWidgetState extends State<LogRequestWidget>
                     'duration:${resOpt?.duration ?? 0}ms\n${dataFormat(reqOpt.data)}'
                     '\nparams:${toJson(reqOpt.params)}\nheader:${reqOpt.headers}');
               },
-              child: Text('copy all'),
+              child: Text('复制全部'),
             ),
             _buildKeyValue('url', reqOpt.url),
             _buildKeyValue('method', reqOpt.method),
@@ -118,7 +122,10 @@ class _LogRequestWidgetState extends State<LogRequestWidget>
   Text _getDefText(String str) {
     return Text(
       str,
-      style: TextStyle(fontSize: 15),
+      style: TextStyle(
+        fontSize: 16,
+        color: Theme.of(context).textTheme.titleLarge?.color,
+      ),
     );
   }
 
@@ -139,7 +146,13 @@ class _LogRequestWidgetState extends State<LogRequestWidget>
         var decodedMap = json.decode(data);
         return _buildJsonView('body', decodedMap);
       } catch (e) {
-        return Text('body: $data');
+        return Text(
+          'body: $data',
+          style: TextStyle(
+            color: Theme.of(context).textTheme.titleLarge?.color,
+            fontSize: 15,
+          ),
+        );
       }
     } else {
       return SizedBox();

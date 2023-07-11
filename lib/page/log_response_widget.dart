@@ -22,12 +22,24 @@ class _LogResponseWidgetState extends State<LogResponseWidget>
     var json = response?.data ?? 'no response';
     return SingleChildScrollView(
         child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             SizedBox(width: 10),
-            Text(isShowAll ? 'shrink all' : 'expand all'),
+            Text(
+              isShowAll ? '全部折叠' : '展开全部',
+              style: TextStyle(
+                fontSize: 15,
+                color: Theme.of(context).textTheme.titleLarge?.color,
+              ),
+            ),
             Switch(
+              inactiveThumbColor: Colors.grey.shade100,
+              inactiveTrackColor: Colors.grey.shade400,
               value: isShowAll,
               onChanged: (check) {
                 isShowAll = check;
@@ -70,12 +82,13 @@ class _LogResponseWidgetState extends State<LogResponseWidget>
           onPressed: () {
             copyClipboard(context, toJson(json));
           },
-          child: Text('copy json'),
+          child: Text('复制 json'),
         ),
         Text(
           '$key',
           style: TextStyle(
             fontSize: fontSize,
+            height: 1.4,
           ),
         ),
         JsonView(
