@@ -1,0 +1,4 @@
+  .dart_tool/version
+  .fvm/flutter_sdk
+  .fvm/fvm_config.json
+  .vscode/settings.json

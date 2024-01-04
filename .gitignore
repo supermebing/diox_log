@@ -1,0 +1,8 @@
+diox_log.iml
+workspace.xml
+.idea
+.packages
+*.lock
+.dart_tool
+.fvm
+.vscode
