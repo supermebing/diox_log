@@ -24,8 +24,8 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          '🛜日志',
-          style: TextStyle(color: theme.textTheme.titleLarge?.color),
+          'Dio Console 日志',
+          style: TextStyle(color: theme.textTheme.titleLarge?.color, fontSize: 16, fontWeight: FontWeight.bold),
         ),
         backgroundColor: theme.scaffoldBackgroundColor,
         elevation: 1.0,
@@ -45,8 +45,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               child: Align(
                 child: Text(
                   debugBtnIsShow() ? '隐藏悬浮' : '显示悬浮',
-                  style: theme.textTheme.titleSmall!
-                      .copyWith(fontWeight: FontWeight.bold),
+                  style: theme.textTheme.titleSmall!.copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -61,8 +60,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               child: Align(
                 child: Text(
                   '清空',
-                  style: theme.textTheme.titleSmall!
-                      .copyWith(fontWeight: FontWeight.bold),
+                  style: theme.textTheme.titleSmall!.copyWith(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -92,9 +90,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     ///格式化请求时间
     var requestTime = getTimeStr1(reqOpt.requestTime!);
 
-    Color? textColor = LogPoolManager.getInstance().isError(item)
-        ? Colors.red
-        : Theme.of(context).textTheme.titleLarge!.color;
+    Color? textColor = LogPoolManager.getInstance().isError(item) ? Colors.red : Theme.of(context).textTheme.titleLarge!.color;
     return Container(
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,

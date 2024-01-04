@@ -14,9 +14,7 @@ showDebugBtn(BuildContext context, {Widget? button, Color? btnColor}) async {
   try {
     await Future.delayed(Duration(milliseconds: 500));
     dismissDebugBtn();
-    itemEntry = OverlayEntry(
-        builder: (BuildContext context) =>
-            button ?? DraggableButtonWidget(btnColor: btnColor));
+    itemEntry = OverlayEntry(builder: (BuildContext context) => button ?? DraggableButtonWidget(btnColor: btnColor));
 
     ///显示悬浮menu
     Overlay.of(context).insert(itemEntry!);
@@ -41,9 +39,9 @@ class DraggableButtonWidget extends StatefulWidget {
   final Color? btnColor;
 
   DraggableButtonWidget({
-    this.title = 'http log',
+    this.title = 'DioConsole',
     this.onTap,
-    this.btnSize = 66,
+    this.btnSize = 110,
     this.btnColor,
   });
 
@@ -83,16 +81,16 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
       onPanUpdate: _dragUpdate,
       child: Container(
         width: widget.btnSize,
-        height: widget.btnSize,
+        height: widget.btnSize / 2.4,
         color: primaryColor,
         child: Center(
           child: Text(
             widget.title,
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 15,
               color: Colors.white,
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w500,
               decoration: TextDecoration.none,
             ),
           ),
@@ -102,7 +100,7 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
 
     ///圆形
     w = ClipRRect(
-      borderRadius: BorderRadius.circular(widget.btnSize / 2),
+      borderRadius: BorderRadius.circular(6),
       child: w,
     );
 
