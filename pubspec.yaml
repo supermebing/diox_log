@@ -1,6 +1,6 @@
 name: dio5_log
 description: A plug-in that captures requests and views them within the application, providing functions such as request replication and JSON expansion
-version: 5.1.0
+version: 5.1.1
 homepage: https://github.com/supermebing/diox_log
 
 environment:

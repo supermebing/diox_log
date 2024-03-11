@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'dio_log.dart';
@@ -9,12 +10,18 @@ import 'dio_log.dart';
 OverlayEntry? itemEntry;
 
 ///显示全局悬浮调试按钮
-showDebugBtn(BuildContext context, {Widget? button, Color? btnColor}) async {
+showDebugBtn(BuildContext context, {Widget? button, Color? btnColor, required double btnSize}) async {
   ///widget第一次渲染完成
   try {
     await Future.delayed(Duration(milliseconds: 500));
     dismissDebugBtn();
-    itemEntry = OverlayEntry(builder: (BuildContext context) => button ?? DraggableButtonWidget(btnColor: btnColor));
+    itemEntry = OverlayEntry(
+        builder: (BuildContext context) =>
+            button ??
+            DraggableButtonWidget(
+              btnColor: btnColor,
+              btnSize: btnSize,
+            ));
 
     ///显示悬浮menu
     Overlay.of(context).insert(itemEntry!);
@@ -41,7 +48,7 @@ class DraggableButtonWidget extends StatefulWidget {
   DraggableButtonWidget({
     this.title = 'DioConsole',
     this.onTap,
-    this.btnSize = 110,
+    this.btnSize = 50,
     this.btnColor,
   });
 
@@ -81,28 +88,44 @@ class _DraggableButtonWidgetState extends State<DraggableButtonWidget> {
       onPanUpdate: _dragUpdate,
       child: Container(
         width: widget.btnSize,
-        height: widget.btnSize / 2.4,
-        color: primaryColor,
-        child: Center(
-          child: Text(
-            widget.title,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              decoration: TextDecoration.none,
+        height: widget.btnSize,
+        decoration: BoxDecoration(
+          color: primaryColor,
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black87.withOpacity(0.25),
+              offset: Offset(3.0, 3.0),
+              blurRadius: 10.0,
+              spreadRadius: 0.8,
             ),
-          ),
+          ],
         ),
+        child: Icon(
+          Icons.token,
+          size: 35,
+          color: Colors.white,
+        ),
+        // child: Center(
+        //   child: Text(
+        //     widget.title,
+        //     textAlign: TextAlign.center,
+        //     style: TextStyle(
+        //       fontSize: 15,
+        //       color: Colors.white,
+        //       fontWeight: FontWeight.w500,
+        //       decoration: TextDecoration.none,
+        //     ),
+        //   ),
+        // ),
       ),
     );
 
     ///圆形
-    w = ClipRRect(
-      borderRadius: BorderRadius.circular(6),
-      child: w,
-    );
+    // w = ClipRRect(
+    //   borderRadius: BorderRadius.circular(50),
+    //   child: w,
+    // );
 
     ///计算偏移量限制
     if (left < 1) {

@@ -24,7 +24,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Dio Console 日志',
+          '网络调试',
           style: TextStyle(color: theme.textTheme.titleLarge?.color, fontSize: 16, fontWeight: FontWeight.bold),
         ),
         backgroundColor: theme.scaffoldBackgroundColor,
@@ -36,7 +36,7 @@ class _HttpLogListWidgetState extends State<HttpLogListWidget> {
               if (debugBtnIsShow()) {
                 dismissDebugBtn();
               } else {
-                showDebugBtn(context);
+                showDebugBtn(context, btnSize: 50);
               }
               setState(() {});
             },
